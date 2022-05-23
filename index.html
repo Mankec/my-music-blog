@@ -13,16 +13,45 @@ layout: default
   </div>
 
   <div class="album-container">
-    <!-- Assigning values to albums array and num variable -->
+    <!-- Assigning values needed for loop -->
     {% assign albums = site.data.pendulum.albums | sort:"year_of_release" %} {%
-    assign num = site.data.pendulum.albums_sum | modulo:2 %} {% if num == 0 %}
-    {% assign num = "even" %} {% else %} {% assign num = "odd" %} {% endif %}
+    assign sum = site.data.pendulum.albums_sum | modulo:2 %} {% if sum == 0 %}
+    {% assign sum = "even" %} {% else %} {% assign sum = "odd" %} {% endif %} {%
+    assign i = 0 %}
 
     <!-- Looping over albums arrays -->
-    {% for album in albums %} {% if album.last_album == true and num == "odd" %}
-    <div class="album-block-centered">{{album.name}} This is last album</div>
+    {% for album in albums %}
+
+    <!-- Getting number of songs in album -->
+    {% assign songs = site.data.pendulum.albums[i].songs %}
+
+    <!-- Checking if album sum is even or odd (important for styling) -->
+    {% if albums.last == album and sum == "odd" %}
+
+    <div class="album-block-centered"></div>
+
     {% else %}
-    <div class="album-block">{{ num }}</div>
-    {% endif %} {% endfor %}
+
+    <div class="album-block">
+      <div class="flex">
+        <div class="album-cover-container">
+          <img src="{{ album.album_cover }}" />
+        </div>
+        <div class="album-info-container">
+          <!-- <h2>{{ album.name }}</h2> -->
+        </div>
+      </div>
+      <div class="album-list-container">
+        <ul>
+          {% for song in songs %}
+          <li class="album-list">{{ song }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    {% endif %}
+    <!-- Increment counter by 1 -->
+    {% assign i = i | plus: 1 %} {% endfor %}
   </div>
 </div>

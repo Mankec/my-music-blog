@@ -9,6 +9,10 @@ body {
   height: 100%;
 }
 
+.flex {
+  display: flex;
+}
+
 h1 {
   color: white;
 }
@@ -47,23 +51,56 @@ h1 {
 }
 
 .album-block {
-  background-color: green;
-  width: 50%;
-  height: 78%;
-  padding: 1.5rem;
-}
-
-.album-block {
   background-color: red;
+  border: 10px solid green;
   width: 50%;
-  height: 15rem;
-  padding: 1.5rem;
+  height: 30rem;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .album-block-centered {
   background-color: red;
+  border: 10px solid black;
   width: 50%;
-  height: 15rem;
-  padding: 1.5rem;
+  height: 30rem;
   transform: translateX(50%);
+}
+
+.album-cover-container {
+  width: 100%;
+  height: 20rem;
+}
+
+.album-cover-container img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+/* .album-info-container {
+  width: 40%;
+} */
+
+.album-info-container h2 {
+  color: orange;
+  text-align: center;
+}
+
+.album-list-container {
+  margin-top: 1rem;
+}
+
+.album-list {
+  margin-bottom: 0.25rem;
+  padding: 0 1rem 0 1rem;
+  list-style: none;
+}
+
+.album-list:nth-child(odd) {
+  background-color: green;
+}
+
+.album-list:nth-child(even) {
+  background-color: greenyellow;
 }

@@ -50,3 +50,6 @@
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
+
+{% assign songs = site.data.pendulum.albums[i].songs.size %}
+{% if songs <= 10 %}album-block{% else %}album-block-overflow{% endif %}
