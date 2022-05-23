@@ -1,0 +1,14 @@
+artist: Pendulum
+albums:
+  - name: Hold Your Colour
+    year_of_release: 2005
+    album_cover:
+  - name: In Silico
+    year_of_release: 2008
+    album_cover:
+  - name: Immersion
+    year_of_release: 2010
+    album_cover:
+    last_album: true
+
+albums_sum: 3
