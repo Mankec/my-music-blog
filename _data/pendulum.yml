@@ -1,63 +1,54 @@
 artist: Pendulum
+albums_sum: 3
 albums:
   - name: Hold Your Colour
     year_of_release: 2005
     album_cover: img/hold_your_colour.jpg
-    songs: [
-        "Prelude",
-        "Slam",
-        "Plasticworld (featuring Fats and TC)",
-        "Fasten Your Seatbelt (featuring Freestylers)",
-        "Through the Loop",
-        "Sounds of Life (featuring Jasmine Yee)",
-        "Girl in the Fire",
-        "Tarantula (Pendulum vs. Fresh
-        featuring $pyda and Tenor Fly)",
-        "Out Here",
-        "Hold Your Colour",
-        "The Terminal",
-        "Streamline",
-        "Another Planet",
-        "Still Grey",
-      ]
-
+    songs:
+      - Prelude
+      - Slam
+      - Plasticworld (featuring Fats and TC)
+      - Fasten Your Seatbelt (featuring Freestylers)
+      - Through the Loop
+      - Sounds of Life (featuring Jasmine Yee)
+      - Girl in the Fire
+      - Tarantula (Pendulum vs. Fresh featuring $pyda and Tenor Fly)
+      - Out Here
+      - Hold Your Colour
+      - The Terminal
+      - Streamline
+      - Another Planet
+      - Still Grey
   - name: In Silico
     year_of_release: 2008
-    album_cover:
+    album_cover: null
     songs:
-      [
-        "Showdown",
-        "Different",
-        "Propane Nightmares",
-        "Visions",
-        "Midnight Runner",
-        "The Other Side",
-        "Mutiny",
-        "9,000 Miles",
-        "Granite",
-        "The Tempest",
-      ]
-
+      - Showdown
+      - Different
+      - Propane Nightmares
+      - Visions
+      - Midnight Runner
+      - The Other Side
+      - Mutiny
+      - "9,000 Miles"
+      - Granite
+      - The Tempest
   - name: Immersion
     year_of_release: 2010
-    album_cover:
+    album_cover: null
     songs:
-      [
-        "Genesis",
-        "Salt in the Wounds",
-        "Watercolour",
-        "Set Me on Fire",
-        "Crush",
-        "Under the Waves",
-        "Immunize (featuring Liam Howlett)",
-        "The Island - Pt.I (Dawn)",
-        "The Island - Pt.II (Dusk)",
-        "Comprachicos",
-        "The Vulture",
-        "Witchcraft",
-        "Self vs. Self (featuring In Flames)",
-        "The Fountain (featuring Steven Wilson)",
-        "Encoder",
-      ]
-
-albums_sum: 3
+      - Genesis
+      - Salt in the Wounds
+      - Watercolour
+      - Set Me on Fire
+      - Crush
+      - Under the Waves
+      - Immunize (featuring Liam Howlett)
+      - The Island - Pt.I (Dawn)
+      - The Island - Pt.II (Dusk)
+      - Comprachicos
+      - The Vulture
+      - Witchcraft
+      - Self vs. Self (featuring In Flames)
+      - The Fountain (featuring Steven Wilson)
+      - Encoder
