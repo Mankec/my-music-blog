@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  color: white;
+}
+
+.navbar-1 {
+  background-color: blue;
+  height: 4vw;
+  width: 100%;
+}
+
+.navbar-2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  background-color: blue;
+  width: 22%;
+  height: 100%;
+}
+
+.about-band-header {
+  background-color: yellow;
+  width: 100%;
+}
+
+.container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 78%;
+}
+
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.album-block {
+  background-color: green;
+  width: 50%;
+  height: 78%;
+  padding: 1.5rem;
+}
+
+.album-block {
+  background-color: red;
+  width: 50%;
+  height: 15rem;
+  padding: 1.5rem;
+}
+
+.album-block-centered {
+  background-color: red;
+  width: 50%;
+  height: 15rem;
+  padding: 1.5rem;
+  transform: translateX(50%);
+}
