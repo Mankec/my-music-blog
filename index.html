@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="about-band-header">
+    <h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+      placeat iure sunt quaerat praesentium libero recusandae nemo est aliquid,
+      dolorem necessitatibus voluptatibus natus! Autem, voluptatibus deleniti
+      dicta omnis modi excepturi!
+    </h1>
+  </div>
+
+  <div class="album-container">
+    <!-- Assigning values to albums array and num variable -->
+    {% assign albums = site.data.pendulum.albums | sort:"year_of_release" %} {%
+    assign num = site.data.pendulum.albums_sum | modulo:2 %} {% if num == 0 %}
+    {% assign num = "even" %} {% else %} {% assign num = "odd" %} {% endif %}
+
+    <!-- Looping over albums arrays -->
+    {% for album in albums %} {% if album.last_album == true and num == "odd" %}
+    <div class="album-block-centered">{{album.name}} This is last album</div>
+    {% else %}
+    <div class="album-block">{{ num }}</div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
