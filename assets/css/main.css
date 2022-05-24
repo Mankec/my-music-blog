@@ -13,6 +13,13 @@ body {
   display: flex;
 }
 
+.scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  height: 100%;
+}
+
 h1 {
   color: white;
 }
@@ -24,48 +31,88 @@ h1 {
 }
 
 .navbar-2 {
+  width: 15%;
+  height: 100%;
+  background-color: blue;
+
   position: fixed;
   top: 0;
   right: 0;
-
-  background-color: blue;
-  width: 22%;
-  height: 100%;
 }
 
 .about-band-header {
-  background-color: yellow;
   width: 100%;
+  background-color: yellow;
 }
 
-.container {
-  overflow-y: scroll;
+.albums-content-container {
+  width: 85%;
   overflow-x: hidden;
-  width: 78%;
+  overflow-y: scroll;
 }
 
-.album-container {
+.album-blocks-container {
+  width: 100%;
+
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  justify-content: center;
 }
 
 .album-block {
-  background-color: red;
-  border: 10px solid green;
-  width: 50%;
+  margin: 1rem;
+  padding: 0.5rem;
+  width: 46%;
   height: 30rem;
+  background-color: red;
 
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 .album-block-centered {
-  background-color: red;
-  border: 10px solid black;
   width: 50%;
   height: 30rem;
+  background-color: red;
+  border: 10px solid black;
+
   transform: translateX(50%);
+}
+
+.album-header {
+  margin-bottom: 0.5rem;
+
+  display: flex;
+}
+
+.album-name {
+  width: 75%;
+  height: 2.5rem;
+  border-right: 3px solid green;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-name h2 {
+  font-size: 22px;
+  color: limegreen;
+}
+
+.album-release-date {
+  width: 25%;
+  height: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-release-date span {
+  color: orange;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .album-cover-container {
@@ -76,25 +123,68 @@ h1 {
 .album-cover-container img {
   max-width: 100%;
   max-height: auto;
+  border: 8px solid blue;
+  border-radius: 10px;
 }
 
-/* .album-info-container {
-  width: 40%;
-} */
+.album-list-header {
+  height: 2.5rem;
+  margin-top: 1rem;
+  border-radius: 10px 10px 0 0;
+  background-color: greenyellow;
 
-.album-info-container h2 {
-  color: orange;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .album-list-container {
-  margin-top: 1rem;
+  width: 100%;
 }
 
 .album-list {
-  margin-bottom: 0.25rem;
-  padding: 0 1rem 0 1rem;
   list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-list ol {
+  list-style: none;
+}
+
+.list-counter {
+  background-color: brown;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-list span {
+  width: 10%;
+  font-weight: bold;
+  color: orange;
+  border-right: 4px solid blue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-list h3 {
+  width: 90%;
+  margin-left: 15px;
+  font-size: 15px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.album-list:last-child {
+  border-radius: 0 0 10px 10px;
 }
 
 .album-list:nth-child(odd) {
