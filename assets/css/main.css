@@ -59,7 +59,15 @@ h1 {
   justify-content: center;
 }
 
-.album-block {
+.album-block-1 {
+  margin: 1rem;
+  padding: 0.5rem;
+  width: 46%;
+  height: 30rem;
+  background-color: red;
+}
+
+.album-block-2 {
   margin: 1rem;
   padding: 0.5rem;
   width: 46%;
