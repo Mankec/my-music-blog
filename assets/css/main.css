@@ -24,6 +24,8 @@ h1 {
   color: white;
 }
 
+/***** NAVBAR *****/
+
 .navbar-1 {
   background-color: blue;
   height: 4vw;
@@ -39,6 +41,8 @@ h1 {
   top: 0;
   right: 0;
 }
+
+/***** ALBUM CONTENT *****/
 
 .about-band-header {
   width: 100%;
@@ -60,50 +64,6 @@ h1 {
   justify-content: center;
 }
 
-.album-block {
-  margin: 1rem;
-  width: 46%;
-
-  background-color: red;
-}
-
-.album-block-1 {
-  padding: 0.5rem 0 0.5 0;
-  width: 100%;
-  height: 15rem;
-  background-color: red;
-}
-
-.album-block-2 {
-  margin-top: 9.67rem;
-  padding: 0;
-  height: 8rem;
-  background-color: red;
-  width: 100%;
-
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-.album-block-2::-webkit-scrollbar {
-  width: 18px; /* width of the entire scrollbar */
-}
-
-.album-block-2::-webkit-scrollbar-track {
-  background: green; /* color of the tracking area */
-}
-
-.album-block-2::-webkit-scrollbar-thumb {
-  background-color: green; /* color of the scroll thumb */
-  border-radius: 10px; /* roundness of the scroll thumb */
-  border: 3px solid green; /* creates padding around scroll thumb */
-}
-
-.album-block-2 {
-  scrollbar-width: thin; /* "auto" or "thin" */
-  scrollbar-color: green green; /* scroll thumb and track */
-}
-
 .album-block-centered {
   width: 50%;
   height: 30rem;
@@ -113,15 +73,65 @@ h1 {
   transform: translateX(50%);
 }
 
+.album-block {
+  margin: 1rem;
+  width: 46%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.album-block-1 {
+  width: 100%;
+  height: 40%;
+  background-color: green;
+}
+
+.album-block-2 {
+  height: 40%;
+  background-color: yellow;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.sub-album-block-2 {
+  width: 100%;
+  height: 10rem;
+  background-color: green;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.sub-album-block-2::-webkit-scrollbar {
+  width: 18px; /* width of the entire scrollbar */
+}
+
+.sub-album-block-2::-webkit-scrollbar-track {
+  background: green; /* color of the tracking area */
+}
+
+.sub-album-block-2::-webkit-scrollbar-thumb {
+  background-color: green; /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 3px solid green; /* creates padding around scroll thumb */
+}
+
+.sub-album-block-2 {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: green green; /* scroll thumb and track */
+}
+
 .album-header {
-  margin-bottom: 0.5rem;
+  height: 10%;
 
   display: flex;
 }
 
 .album-name {
   width: 75%;
-  height: 2.5rem;
   border-right: 3px solid green;
 
   display: flex;
@@ -151,7 +161,7 @@ h1 {
 
 .album-cover-container {
   width: 100%;
-  height: 25rem;
+  height: 40%;
 }
 
 .album-cover-container img {
@@ -160,17 +170,18 @@ h1 {
 }
 
 .album-list-header {
+  margin: 0 0 1rem 2.5rem;
   height: 2.5rem;
-  margin-top: 1rem;
-  background-color: greenyellow;
-  border-radius: 10px 10px 0 0;
+  font-size: 28px;
+  background-color: green;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .album-songs-container {
+  margin-top: 0.25rem;
   padding: 0.25rem;
 }
 
@@ -223,5 +234,36 @@ h1 {
 }
 
 .album-list:nth-child(even) {
-  background-color: greenyellow;
+  background-color: green;
+}
+
+.genre-tags {
+  padding: 0.25rem;
+  height: 10%;
+
+  background-color: green;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul .genre {
+  display: inline-block;
+}
+
+.genre {
+  padding: 4px;
+  font-weight: bold;
+
+  border: 2px solid orange;
+  border-radius: 25px;
+}
+
+.genre a {
+  font-size: 14px;
+  color: orange;
+  text-decoration: none;
+}
+.genre a:hover {
+  color: yellow;
+  text-decoration: underline;
 }

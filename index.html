@@ -22,8 +22,11 @@ layout: default
     <!-- Looping over albums arrays -->
     {% for album in albums %}
 
-    <!-- Getting number of songs in album -->
-    {% assign songs = site.data.pendulum.albums[i].songs %}
+    <!-- Getting number of songs in album  -->
+    {% assign songs = albums[i].songs %}
+
+    <!-- Getting genres array -->
+    {% assign genres = albums[i].genres %}
 
     <!-- Checking if album sum is even or odd (important for styling) -->
     {% if albums.last == album and sum == "odd" %}
@@ -45,24 +48,36 @@ layout: default
         </div>
       </div>
 
+      <div class="genre-tags">
+        <ul>
+          {% for genre in genres %}
+          <li class="genre">
+            <a href="tags/{{ genre | slugify}}.html">{{ genre }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
       <div class="album-block-2">
-        <div class="album-songs-container">
-          <div class="album-list-header">
-            <span>Songs</span>
-          </div>
-          <div class="album-list-container">
-            <ol>
-              <!-- Counter for span element  -->
-              {% assign n = 1 %} {% for song in songs %}
+        <div class="sub-album-block-2">
+          <div class="album-songs-container">
+            <div class="album-list-header">
+              <span>Songs</span>
+            </div>
+            <div class="album-list-container">
+              <ol>
+                <!-- Counter for span element  -->
+                {% assign n = 1 %} {% for song in songs %}
 
-              <li class="album-list">
-                <span>{{ n }}</span>
-                <h3>{{ song }}</h3>
-              </li>
+                <li class="album-list">
+                  <span>{{ n }}</span>
+                  <h3>{{ song }}</h3>
+                </li>
 
-              <!-- Increment counter by 1  -->
-              {% assign n = n | plus: 1 %} {% endfor %}
-            </ol>
+                <!-- Increment counter by 1  -->
+                {% assign n = n | plus: 1 %} {% endfor %}
+              </ol>
+            </div>
           </div>
         </div>
       </div>
