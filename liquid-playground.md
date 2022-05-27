@@ -53,3 +53,39 @@
 
 {% assign songs = site.data.pendulum.albums[i].songs.size %}
 {% if songs <= 10 %}album-block{% else %}album-block-overflow{% endif %}
+
+<!-- ------------------------------------------ -->
+<!-- ------------------------------------------ -->
+<!-- ------------------------------------------ -->
+
+{% assign albums = site.data.pendulum.albums %} {% assign i = 0 %} {% for album
+in albums %} {% assign genres = albums[i].genres %}
+
+<div class="album-preview">
+  {% if genres contains "Drum and bass" %}
+  <img src="{{ album.album_cover }}" />
+  {% endif %}
+</div>
+{% assign i = i | plus: 1 %} {% endfor %} {% if i == 0 %} {% endif %}
+
+<!-- ------------------------------------------ -->
+<!-- ------------------------------------------ -->
+<!-- ------------------------------------------ -->
+<!-- Best solution for now -->
+
+{% assign dnb = site.data.tags.drum_and_bass.albums | sort: "year_of_release" |
+reverse %} {% for album in dnb %}
+
+<div class="album-preview">
+  <h1>{{ album.name }}</h1>
+  <h1>{{ album.year_of_release }}</h1>
+  <img src="{{ album.album_cover }}" />
+</div>
+{% endfor %}
+
+<!-- ------------------------------------------ -->
+<!-- ------------------------------------------ -->
+<!-- ------------------------------------------ -->
+<!-- Possible better solution -->
+
+{{ site.data.bands[0] | where_exp: "pendulum", "pendulum.genre == 'test'" }
