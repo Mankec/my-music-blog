@@ -1,8 +1,12 @@
 artist: Pendulum
+tags: [Drum and bass, Breakbeat, Jungle]
+tags_html: [drumandbass, breakbeat, jungle]
 albums_sum: 3
 albums:
   - name: Hold Your Colour
     year_of_release: 2005
+    genres: [Drum and bass, Breakbeat, Jungle]
+    genres_html: [Drumandbass, Breakbeat, Jungle]
     album_cover: img/hold_your_colour.jpg
     songs:
       - Prelude
@@ -21,6 +25,7 @@ albums:
       - Still Grey
   - name: In Silico
     year_of_release: 2008
+    genres: [tag1 tag2 tag3 tag4 tag5]
     album_cover: null
     songs:
       - Showdown
@@ -35,6 +40,7 @@ albums:
       - The Tempest
   - name: Immersion
     year_of_release: 2010
+    genres: [tag1 tag2 tag3 tag4 tag5]
     album_cover: null
     songs:
       - Genesis
