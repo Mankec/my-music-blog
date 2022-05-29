@@ -89,3 +89,5 @@ reverse %} {% for album in dnb %}
 <!-- Possible better solution -->
 
 {{ site.data.bands[0] | where_exp: "pendulum", "pendulum.genre == 'test'" }
+
+{% if albums.last == album and sum == "odd" %} {% else %} {% endif %}
