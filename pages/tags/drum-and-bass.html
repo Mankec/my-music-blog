@@ -1,0 +1,19 @@
+---
+layout: default2
+---
+
+<h2>Drum and bass</h2>
+
+{% assign tags = site.tags %} {% for tag in tags %}
+
+<ul>
+  {% for album in tag[1] %} {% if tag[0] == "Drum and bass" %}
+
+  <li><a href="../../{{ album.band_page_url }}">{{ album.title }}</a></li>
+  <div class="album-cover-tag-container">
+    <img src="../../{{ album.cover_img }}" alt="" />
+  </div>
+
+  {% endif %} {% endfor %}
+</ul>
+{% endfor %}
