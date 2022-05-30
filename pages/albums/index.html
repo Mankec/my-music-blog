@@ -1,0 +1,28 @@
+---
+layout: default
+title: Albums
+---
+
+<h1>{{ page.title }}</h1>
+
+{% for band in site.categories %} {% assign band_name = band[0] %}
+<h1>{{ band_name }}</h1>
+<ul>
+  {% for album in band[1] %}
+
+  <li><a href="{{ album.url }}">{{ album.album_name }}</a></li>
+
+  {% endfor %}
+</ul>
+{% endfor %}
+<!-- -->
+<!--  -->
+<!--  -->
+<!-- {% for tag in site.tags %}
+<h3>{{ tag[0] }}</h3>
+<ul>
+  {% for post in tag[1] %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endfor %} -->
