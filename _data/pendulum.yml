@@ -3,8 +3,8 @@ albums_sum: 5
 albums:
   - name: Hold Your Colour
     year_of_release: 2005
-    genres: [Drum and bass, Breakbeat, Jungle]
-    album_cover: ../img/hold_your_colour.jpg
+    genres: [Drum and bass, Breakbeat, Jungle, Aa, ccc]
+    album_cover: img/hold_your_colour.jpg
     songs:
       - Prelude
       - Slam
@@ -22,8 +22,8 @@ albums:
       - Still Grey
   - name: In Silico
     year_of_release: 2008
-    genres: [Drum and bass, Electronic rock, Alternative dance]
-    album_cover: ../img/hold_your_colour.jpg
+    genres: [Drum and bass, Electronic rock, Alternative dance, aaa]
+    album_cover: img/hold_your_colour.jpg
     songs:
       - Showdown
       - Different
@@ -37,8 +37,8 @@ albums:
       - The Tempest
   - name: Immersion
     year_of_release: 2010
-    genres: [Drum and bass, Electronic rock, Industrial rock]
-    album_cover: ../img/hold_your_colour.jpg
+    genres: [Drum and bass, Electronic rock, aaa, Industrial rock, bbb]
+    album_cover: img/hold_your_colour.jpg
     songs:
       - Genesis
       - Salt in the Wounds

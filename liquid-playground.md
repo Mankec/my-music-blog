@@ -9,7 +9,7 @@
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
 
- <div class="album-container">
+ <!-- <div class="album-container">
     {% assign albumcount = page.albumcount %} {% assign value = page.albumcount
     | modulo:2 %} {% if value == 0 %} {% assign value = "even" %} {% else %} {%
     assign value = "odd" %} {% endif %} {% for i in (1..albumcount) %} {% if i
@@ -45,20 +45,20 @@
     </div>
     {% endif %} {% endfor %}
   </div>
-</div>
+</div> -->
 
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
 
-{% assign songs = site.data.pendulum.albums[i].songs.size %}
-{% if songs <= 10 %}album-block{% else %}album-block-overflow{% endif %}
+<!-- {% assign songs = site.data.pendulum.albums[i].songs.size %}
+{% if songs <= 10 %}album-block{% else %}album-block-overflow{% endif %} -->
 
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
 
-{% assign albums = site.data.pendulum.albums %} {% assign i = 0 %} {% for album
+<!-- {% assign albums = site.data.pendulum.albums %} {% assign i = 0 %} {% for album
 in albums %} {% assign genres = albums[i].genres %}
 
 <div class="album-preview">
@@ -66,14 +66,14 @@ in albums %} {% assign genres = albums[i].genres %}
   <img src="{{ album.album_cover }}" />
   {% endif %}
 </div>
-{% assign i = i | plus: 1 %} {% endfor %} {% if i == 0 %} {% endif %}
+{% assign i = i | plus: 1 %} {% endfor %} {% if i == 0 %} {% endif %} -->
 
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
 <!-- Best solution for now -->
 
-{% assign dnb = site.data.tags.drum_and_bass.albums | sort: "year_of_release" |
+<!-- {% assign dnb = site.data.tags.drum_and_bass.albums | sort: "year_of_release" |
 reverse %} {% for album in dnb %}
 
 <div class="album-preview">
@@ -81,13 +81,11 @@ reverse %} {% for album in dnb %}
   <h1>{{ album.year_of_release }}</h1>
   <img src="{{ album.album_cover }}" />
 </div>
-{% endfor %}
+{% endfor %} -->
 
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
 <!-- ------------------------------------------ -->
 <!-- Possible better solution -->
 
-{{ site.data.bands[0] | where_exp: "pendulum", "pendulum.genre == 'test'" }
-
-{% if albums.last == album and sum == "odd" %} {% else %} {% endif %}
+<!-- {% if albums.last == album and sum == "odd" %} {% else %} {% endif %} -->

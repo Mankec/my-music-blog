@@ -6,7 +6,7 @@ album_name: Immersion
 year_of_release: 2010
 cover_img: img/hold_your_colour.jpg
 tags: [Drum and bass, Electronic rock, Industrial rock]
-category: pendulum
+category: Pendulum
 songs: [
     Genesis,
     Salt in the Wounds,

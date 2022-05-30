@@ -1,13 +1,19 @@
-<div class="album-block">
+---
+layout: default
+---
+
+<div class="album-block-centered">
   <div class="album-block-1">
     <div class="album-header">
-      <div class="album-name"><h2>{{ album.name }}</h2></div>
+      <div class="album-name">
+        <h2>{{ album.name }}</h2>
+      </div>
       <div class="album-release-date">
         <span>{{ album.year_of_release }}</span>
       </div>
     </div>
     <div class="album-cover-container">
-      <img src="{{ site.baseurl }}/{{ album.album_cover }}" />
+      <img src="{{ album.album_cover }}" />
     </div>
   </div>
 
@@ -15,9 +21,7 @@
     <ul>
       {% for genre in genres %}
       <li class="genre">
-        <a href="{{ site.baseurl }}/pages/genres/{{ genre | slugify }}"
-          >{{ genre }}</a
-        >
+        <a href="tags/{{ genre | slugify }}.html">{{ genre }}</a>
       </li>
       {% endfor %}
     </ul>
