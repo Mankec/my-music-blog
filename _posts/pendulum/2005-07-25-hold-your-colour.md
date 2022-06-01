@@ -7,7 +7,7 @@ year_of_release: 2005
 band_cover_img: img/hold_your_colour.jpg
 cover_img: img/hold_your_colour.jpg
 tags: [Drum and bass, Breakbeat, Jungle]
-category: Pendulum 
+categories: Music Pendulum
 songs: [ Prelude, Slam, Plasticworld (featuring Fats and TC), Fasten Your Seatbelt
 (featuring Freestylers), Through the Loop, Sounds of Life (featuring Jasmine
 Yee), Girl in the Fire, Tarantula (Pendulum vs. Fresh featuring $pyda and Tenor

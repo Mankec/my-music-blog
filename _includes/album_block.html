@@ -15,7 +15,7 @@
     <ul>
       {% assign tags_sorted = album.tags | sort %} {% for tag in tags_sorted %}
       <li class="genre">
-        <a href="{{ site.baseurl }}/pages/genres/{{ tag | slugify }}"
+        <a href="{{ site.baseurl }}/pages/genres/{{ tag | slugify  }}"
           >{{ tag }}</a
         >
       </li>

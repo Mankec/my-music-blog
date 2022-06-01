@@ -8,26 +8,17 @@ title: Bands
 <h2>List of all bands</h2>
 
 {% for band in site.categories %}
-
+<!--  -->
+{% assign band_name = band[0] | remove: "Music" %}
+<!--  -->
+{% if band_name != empty %}
 <ul>
   <li>
-    <a href="{{ site.baseurl }}/pages/bands/{{ band[0] | slugify }}"
-      ><h1>{{ band[0] }}</h1></a
+    <a href="{{ site.baseurl }}/pages/bands/{{ band_name | slugify }}"
+      ><h1>{{ band_name }}</h1></a
     >
   </li>
-  {% assign emp_arr = "" | split: "" %}
-  <!--  -->
-  {% for album in band[1] %}
-  <!--  -->
-  {% assign emp_arr = emp_arr | push: album.tags | join: ", " | split: ", " %}
-  {% endfor %}
 </ul>
-
-<h1>{{ emp_arr | uniq }}</h1>
-{% assign all_tags = emp_arr | uniq %} {% for tag in all_tags %}
-<ul>
-  <li>{{ tag }}</li>
-</ul>
-{% endfor %}
+{% endif %}
 <!--  -->
 {% endfor %}

@@ -1,19 +1,29 @@
 ---
 layout: default
 title: Albums
+album_url: pages/bands
 ---
 
 <h1>{{ page.title }}</h1>
 
-{% for band in site.categories %} {% assign band_name = band[0] %}
+{% for band in site.categories %}
+<!--  -->
+{% assign band_name = band[0] %}
+<!--  -->
+{% if band_name != "Music" %}
+<!--  -->
 <h1>{{ band_name }}</h1>
 <ul>
   {% for album in band[1] %}
 
   <li>
-    <a href="{{ album.url }}">{{ album.name }}</a>
+    <a href="{{ site.baseurl }}/{{ page.album_url }}/{{ band[0] | slugify }}"
+      >{{ album.name }}</a
+    >
   </li>
 
   {% endfor %}
 </ul>
+{% endif %}
+<!--  -->
 {% endfor %}
