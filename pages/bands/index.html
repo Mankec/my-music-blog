@@ -7,24 +7,6 @@ title: Bands
 
 <h2>List of all bands</h2>
 
-<!-- <div id="archives">
-  {% for category in site.categories %} {% capture category_name %}{{ category |
-  first }}{% endcapture %}
-
-  <ul>
-    <li>
-      <a href="{{ site.baseurl }}/pages/bands/{{ category_name }}"
-        >{{ category_name }}</a
-      >
-    </li>
-  </ul>
-  {% endfor %}
-</div> -->
-
-<!-- {% for band in site.categories %} {% assign band_name = band | first %}
-<h1>{{ band_name }}</h1>
-{% endfor %} -->
-
 {% for band in site.categories %}
 
 <ul>
@@ -33,12 +15,19 @@ title: Bands
       ><h1>{{ band[0] }}</h1></a
     >
   </li>
+  {% assign emp_arr = "" | split: "" %}
+  <!--  -->
+  {% for album in band[1] %}
+  <!--  -->
+  {% assign emp_arr = emp_arr | push: album.tags | join: ", " | split: ", " %}
+  {% endfor %}
 </ul>
-<!-- {% for album in band[1] %} -->
 
-<!-- <img src="{{ site.baseurl }}/{{ album.band_cover_img }}" alt="" />
-
-<h1>{{ album.title }}</h1> -->
-
-<!-- {% endfor %} -->
+<h1>{{ emp_arr | uniq }}</h1>
+{% assign all_tags = emp_arr | uniq %} {% for tag in all_tags %}
+<ul>
+  <li>{{ tag }}</li>
+</ul>
+{% endfor %}
+<!--  -->
 {% endfor %}

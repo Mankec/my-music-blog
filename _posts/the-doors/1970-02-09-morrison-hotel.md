@@ -1,5 +1,8 @@
 ---
 layout: default
+band: The Doors
+tags: [Drum and bass, Breakbeat, Jungle]
 category: The Doors
-album_name: Morrison Hotel
+name: Morrison Hotel
+year_of_release: 1970
 ---

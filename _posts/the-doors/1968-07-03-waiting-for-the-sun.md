@@ -1,5 +1,8 @@
 ---
 layout: default
+band: The Doors
+tags: [Drum and bass, Breakbeat, Jungle]
 category: The Doors
-album_name: Waiting for the Sun
+name: Waiting for the Sun
+year_of_release: 1968
 ---

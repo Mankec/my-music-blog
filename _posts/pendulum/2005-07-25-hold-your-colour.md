@@ -2,7 +2,7 @@
 layout: default
 title: Hold Your Colour - Pendulum
 band: Pendulum
-album_name: Hold Your Colour
+name: Hold Your Colour
 year_of_release: 2005
 band_cover_img: img/hold_your_colour.jpg
 cover_img: img/hold_your_colour.jpg

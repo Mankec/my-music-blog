@@ -1,5 +1,8 @@
 ---
 layout: default
+band: The Doors
+tags: [Drum and bass, Breakbeat, Jungle]
 category: The Doors
-album_name: Strange Days
+name: Strange Days
+year_of_release: 1967
 ---
