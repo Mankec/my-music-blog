@@ -1,0 +1,80 @@
+---
+layout: default
+title: The-Doors
+genres:
+  [
+    Drum and bass,
+    Breakbeat,
+    Jungle,
+    Electronic rock,
+    Alternative dance,
+    Industrial rock,
+  ]
+---
+
+<div class="albums-content-container">
+  <div class="about-band-header">
+    <h1>Pendulum</h1>
+    <p>
+      Pendulum is an Australian electronic rock band founded in 2002.[1]
+      Pendulum originally formed in the city of Perth, Western Australia, by Rob
+      Swire, Gareth McGrillen and Paul "El Hornet" Harding. The band was later
+      expanded to include members Ben Mount, Peredur ap Gwynedd and KJ Sawka.
+      Members Swire and McGrillen also formed the electro house duo Knife Party.
+      The group is notable for its distinctive sound, mixing electronic music
+      with hard rock and covering a wide range of genres.
+    </p>
+    <p>
+      In 2003, Swire, McGrillen and Harding relocated to the United Kingdom. The
+      debut studio album, Hold Your Colour, was released in 2005 to positive
+      critical reception. While Hold Your Colour was mostly of the drum and bass
+      genre, the succeeding albums In Silico and Immersion saw experimentation
+      of other genres such as industrial rock and electronic rock.
+    </p>
+  </div>
+
+  <div class="album-blocks-container">
+    {% for category in site.categories %}
+    <!--  -->
+
+    {% if category[0] == page.title %}
+
+    <!-- Sorting albums by year of release u can change it to title maybe -->
+    {% assign category_sorted = category[1] | sort: year_of_release %}
+
+    <!-- You can comment out this line -->
+    <!-- emp_arr == empty array -->
+    {% assign emp_arr = "" | split: "" %}
+
+    <!--  -->
+    {% for album in category_sorted %}
+
+    <!-- Getting song array from post page -->
+    {% assign songs = album.songs %}
+
+    <!--  -->
+    {% include album_block.html %}
+
+    <!-- Not gonna lie this code is unnecessary, feel free to comment it out -->
+    <!-- His purpose is to put all tags in one array while filtering out duplicates  -->
+    <!-- It was more of a learning experience and practicing array filters  -->
+    {% assign emp_arr = emp_arr | push: album.tags | join: ", " | split: ", " %}
+    <!--  -->
+    {% endfor %}
+    <!--  -->
+    {% endif %}
+    <!-- Filtering out duplicate tags -->
+    {% assign all_tags = emp_arr | uniq %} {% endfor %}
+  </div>
+</div>
+
+<!-- Can be useful as a filter -->
+
+<!-- <div class="block">
+  <h1>ALL TAGS</h1>
+  {% for tag in all_tags %}
+  <ul>
+    <li>{{ tag }}</li>
+  </ul>
+  {% endfor %}
+</div> -->
