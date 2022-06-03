@@ -1,29 +1,43 @@
 ---
 layout: default
 title: Albums
-album_url: pages/bands
+band_page_url: pages/bands
 ---
 
 <h1>{{ page.title }}</h1>
 
-{% for band in site.categories %}
-<!--  -->
-{% assign band_name = band[0] %}
-<!--  -->
-{% if band_name != "Music" %}
-<!--  -->
-<h1>{{ band_name }}</h1>
-<ul>
-  {% for album in band[1] %}
+{% assign categories_sorted = site.categories | sort %}
 
-  <li>
-    <a href="{{ site.baseurl }}/{{ page.album_url }}/{{ band[0] | slugify }}"
-      >{{ album.name }}</a
-    >
-  </li>
+<div class="album-preview-container">
+  {% for band in categories_sorted %}
+  <!--  -->
+  {% assign band_name = band[0] %}
+  <!--  -->
+
+  {% if band_name != "Music" %}
+  <!--  -->
+  {% assign album_sorted = band[1] | sort: year_of_release %} {% for album in
+  album_sorted %}
+
+  <div class="album-preview">
+    <div class="album-preview-cover">
+      <img src="{{ site.baseurl }}/{{ album.cover_img }}" alt="" />
+    </div>
+    <div class="album-preview-name">
+      <h2>{{ album.name }}</h2>
+      <span>
+        <a
+          href="{{ site.baseurl }}/{{ page.band_page_url }}/{{ band_name |
+          slugify }}"
+          >{{ band_name | replace: "-", " " }}</a
+        >
+      </span>
+    </div>
+  </div>
 
   {% endfor %}
-</ul>
-{% endif %}
-<!--  -->
-{% endfor %}
+  <!--  -->
+  {% endif %}
+  <!--  -->
+  {% endfor %}
+</div>

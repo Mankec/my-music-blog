@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Bands
+band_page_url: pages/bands
 ---
 
 <h1>{{ page.title }}</h1>
@@ -10,12 +11,13 @@ title: Bands
 {% for band in site.categories %}
 <!--  -->
 {% assign band_name = band[0] | remove: "Music" %}
-<!--  -->
+<!-- remove filter leaves "" which is bad for slugify filter so I am checking for it -->
 {% if band_name != empty %}
 <ul>
   <li>
-    <a href="{{ site.baseurl }}/pages/bands/{{ band_name | slugify }}"
-      ><h1>{{ band_name }}</h1></a
+    <a
+      href="{{ site.baseurl }}/{{ page.band_page_url }}/{{ band_name | slugify }}"
+      ><h1>{{ band_name | replace: "-", " " }}</h1></a
     >
   </li>
 </ul>

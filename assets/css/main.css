@@ -312,3 +312,47 @@ ul .genre {
   height: 20rem;
   background-color: yellow;
 }
+
+.album-preview-container {
+  padding: 1.5rem;
+  width: 88%;
+  background: yellow;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+  row-gap: 75px;
+}
+.album-preview {
+  height: 36rem;
+  width: 100%;
+  border-radius: 2vmin;
+}
+.album-preview-cover {
+  height: 75%;
+  background: green;
+  border-radius: 2vmin 2vmin 0 0;
+
+  display: flex;
+  align-items: center;
+}
+.album-preview-cover img {
+  width: 100%;
+  max-height: auto;
+}
+.album-preview-name {
+  height: 25%;
+  background-color: green;
+  border-radius: 0 0 2vmin 2vmin;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.album-preview-name h2 {
+  font-size: 2.2rem;
+}
+.album-preview-name span {
+  font-size: 1.6rem;
+}
