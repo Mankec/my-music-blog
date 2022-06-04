@@ -17,6 +17,10 @@ body {
   display: flex;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 h1 {
   color: white;
 }
@@ -45,7 +49,8 @@ h1 {
 
 .navbar ul {
   width: 100%;
-  margin-left: 2rem;
+
+  margin-left: 1rem;
   list-style-type: none;
 
   display: flex;
@@ -63,7 +68,7 @@ h1 {
 
 .navbar li a {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: orange;
 }
 
@@ -355,4 +360,38 @@ ul .genre {
 }
 .album-preview-name span {
   font-size: 1.6rem;
+}
+.bands-container {
+  margin-bottom: 5rem;
+  width: 88%;
+  border-radius: 2vmin;
+
+  display: flex;
+  justify-content: center;
+}
+.band-desc {
+  width: 56%;
+  border-radius: 2vmin 0 0 2vmin;
+  background-color: green;
+}
+.band-photo {
+  aspect-ratio: 1 / 1;
+  width: 26%;
+  border-radius: 0 2vmin 2vmin 0;
+
+  background-color: red;
+}
+.band-desc h2 {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  padding-left: 1.75rem;
+  display: inline-block;
+
+  border-bottom: 2px solid red;
+}
+
+.band-desc p {
+  padding-left: 3rem;
+  padding-right: 0.5rem;
+  font-size: 1.3rem;
 }
