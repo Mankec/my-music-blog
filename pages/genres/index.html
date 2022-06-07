@@ -1,14 +1,65 @@
 ---
 layout: default
 title: Genres
+band_page_url: pages/bands
 ---
 
 <h1>{{ page.title }}</h1>
 
 {% assign tags_sorted = site.tags | sort %}
 <!--  -->
-{% for tag in tags_sorted %}
 
-<h3>{{ tag[0] }}</h3>
+{% for tag in tags_sorted %}
+<!--  -->
+
+{% assign emp_arr = "" | split: "" %}
+<!--  -->
+
+{% for post in tag[1] %}
+<!--  -->
+
+{% assign emp_arr = emp_arr | push: post.categories | join: ", " | remove:
+"Music" | split: ", " %}
+<!--  -->
+
+{% endfor %}
+<!--  -->
+
+{% assign all_bands = emp_arr | uniq %}
+<!--  -->
+
+<div class="genres-container">
+  <div class="genre-block">
+    <span class="genre-name">{{ tag[0] }}</span>
+    {% for band_name in all_bands %}
+    <!--  -->
+
+    {% if band_name != empty %}
+
+    <span class="genre-bands">
+      <!-- If it's last element of an array do not put comma behind it -->
+      {% if band_name != all_bands.last %}
+      <!--  -->
+      <a
+        href="{{ site.baseurl }}/{{ page.band_page_url }}/{{ band_name | slugify }}"
+        >{{ band_name | replace: "-", " " }}</a
+      >,
+      <!--  -->
+      {% else %}
+      <!--  -->
+      <a
+        href="{{ site.baseurl }}/{{ page.band_page_url }}/{{ band_name | slugify }}"
+        >{{ band_name | replace: "-", " " }}</a
+      >
+      <!--  -->
+      {% endif %}
+    </span>
+    <!--  -->
+
+    {% endif %}
+    <!--  -->
+    {% endfor %}
+  </div>
+</div>
 
 {% endfor %}

@@ -16,7 +16,7 @@ band_page_url: pages/bands
 
 {% assign band_name = band[0] | remove: "Music" %}
 
-<!-- remove filter leaves "" which is bad for slugify filter so I am checking for it -->
+<!-- remove filter leaves "" so I am checking for it -->
 
 {% if band_name != empty %}
 <!--  -->

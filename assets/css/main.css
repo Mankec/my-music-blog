@@ -389,9 +389,33 @@ ul .genre {
 
   border-bottom: 2px solid red;
 }
-
 .band-desc p {
   padding-left: 3rem;
   padding-right: 0.5rem;
   font-size: 1.3rem;
+}
+.genres-container {
+  width: 88%;
+
+  display: flex;
+  flex-direction: column;
+}
+.genre-block {
+  height: 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.genres-container:nth-child(odd) {
+  background-color: green;
+}
+.genres-container:nth-child(even) {
+  background-color: greenyellow;
+}
+.genre-name {
+  margin-right: 1rem;
+}
+.genre-bands {
+  margin-right: 0.5rem;
 }
