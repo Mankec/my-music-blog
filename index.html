@@ -1,3 +1,76 @@
 ---
 layout: default
 ---
+
+<div class="albums-content-container">
+  <form action="/home" method="post" autocomplete="off">
+    <div class="grid-form-container">
+      <div class="col-label-1">
+        <label for="add-album">Album name:</label>
+      </div>
+      <div class="col-input-1">
+        <input
+          aria-label="Add album name"
+          bind:value="{album_name}"
+          name="album_name"
+          placeholder=" Morrison Hotel"
+          type="text"
+        />
+      </div>
+
+      <div class="col-label-2">
+        <label for="add-year-of-release">Year of release:</label>
+      </div>
+      <div class="col-input-2 w-50">
+        <input
+          aria-label="Add year album came out"
+          bind:value="{year_of_release}"
+          name="year_of_release"
+          placeholder=" 1970"
+          type="text"
+        />
+      </div>
+
+      <div class="col-label-3">
+        <label for="add-artist">Artist:</label>
+      </div>
+      <div class="col-input-3">
+        <input
+          aria-label="Add new artist"
+          bind:value="{artist_name}"
+          name="artist_name"
+          placeholder=" The Doors"
+          type="text"
+        />
+      </div>
+
+      <div class="col-label-4">
+        <label for="add-track-names">Track names:</label>
+      </div>
+      <div class="col-input-4 w-84">
+        <input
+          aria-label="Add track names"
+          bind:value="{track_names}"
+          name="track_names"
+          placeholder=" track_name1, track_name2, track_name3 etc."
+          type="text"
+        />
+      </div>
+
+      <div class="col-label-5">
+        <label for="add-genre-names">Genre names:</label>
+      </div>
+      <div class="col-input-5 w-84">
+        <input
+          aria-label="Add genre names"
+          bind:value="{genre_names}"
+          name="genre_names"
+          placeholder=" genre_name1, genre_name2, genre_name3 etc."
+          type="text"
+        />
+      </div>
+
+      <button class="btn w-84" type="submit">'Submit'</button>
+    </div>
+  </form>
+</div>

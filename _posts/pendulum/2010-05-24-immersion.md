@@ -1,11 +1,11 @@
 ---
 layout: default
 title: Immersion - Pendulum
-band: Zendulum
+band: Pendulum
 name: Immersion
 year_of_release: 2010
-cover_img: img/hold_your_colour.jpg
-tags: [Drum and bass, Electronic rock, Industrial rock]
+cover_img: img/pendulum/immersion.jpg
+tags: [Drum & Bass, Electronic Rock, Industrial Rock]
 categories: Music Pendulum
 songs: [
     Genesis,
@@ -27,5 +27,4 @@ songs: [
     The Fountain (featuring Steven Wilson),
     Encoder,
   ]
-band_page_url: pages/pendulum
 ---

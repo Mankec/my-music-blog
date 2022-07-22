@@ -13,10 +13,6 @@ body {
   height: 100%;
 }
 
-.flex {
-  display: flex;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -419,3 +415,122 @@ ul .genre {
 .genre-bands {
   margin-right: 0.5rem;
 }
+
+/* Only for svelte */
+
+.grid-form-container {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  align-items: center;
+
+  column-gap: 8px;
+  row-gap: 6px;
+}
+
+.col-label-1 {
+  grid-column: span 1 / 2;
+  justify-self: end;
+}
+.col-input-1 {
+  grid-column: span 1 / 3;
+}
+
+.col-label-2 {
+  grid-column: span 1 / 4;
+  justify-self: end;
+}
+.col-input-2 {
+  grid-column: span 1 / 5;
+}
+.col-label-3 {
+  grid-column: span 1 / 2;
+  justify-self: end;
+}
+.col-input-3 {
+  grid-column: span 1 / 3;
+}
+.col-label-4 {
+  grid-column: span 1 / 2;
+  justify-self: end;
+}
+.col-input-4 {
+  grid-column: span 3 / 5;
+}
+.col-label-5 {
+  grid-column: span 1 / 2;
+  justify-self: end;
+}
+.col-input-5 {
+  grid-column: span 3 / 5;
+}
+
+button {
+  grid-column: span 3 / 5;
+}
+
+form {
+  margin: 0 auto;
+  width: 48rem;
+}
+
+input:focus {
+  outline: 1px solid lime;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.w-48 {
+  width: 48%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-52 {
+  width: 52%;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-84 {
+  width: 84%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* *************** */
